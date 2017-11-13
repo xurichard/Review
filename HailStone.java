@@ -14,7 +14,7 @@ public class HailStone
 		Scanner scanner = new Scanner(System.in);
 		int n = 1;
 
-		while(true){
+		while(n != -1){
 			System.out.print("Enter a positive integer ( 1 - 10000 ). To quit, enter -1: ");
 
 			if (scanner.hasNextInt())
@@ -27,7 +27,8 @@ public class HailStone
 			if(n >= 1 && n <= 1000){
 				HS.findIt(n);
 			} else if(n == -1){
-				break;
+				// break;
+				n = -1; //doing nothing, the while loop will exit after this iteration
 			} else{
 				System.out.println("Enter a value within the range, please!");
 			}
