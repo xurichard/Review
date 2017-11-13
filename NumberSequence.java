@@ -56,7 +56,7 @@ public class NumberSequence
 
 	public boolean findPattern(int[] points, int answer){
 		// Print pattern
-		System.out.println(answer);
+		// System.out.println(answer);
 		String pointsStr = Arrays.toString(points);
 		System.out.println(pointsStr.substring(1, pointsStr.length()-1) + ",__");
 		
@@ -73,7 +73,7 @@ public class NumberSequence
 	            continue;
 	        }
 	        if(n == answer){
-	        	break;
+	        	i = 3;
 	        } else{
 	        	System.out.print("Try again.");
 	        }
@@ -90,9 +90,10 @@ public class NumberSequence
 
 	public boolean checkEquation(){
 		int tries = 0; // Three tries
-		System.out.println(this.a);
-		System.out.println(this.b);
-		System.out.println(this.c);
+		// I used these print statements to win the game to check if it was working
+		// System.out.println(this.a);
+		// System.out.println(this.b);
+		// System.out.println(this.c);
 		this.scanner.nextLine(); // to flush out stndin
 		for(int i = 0; i < 3; i ++){
 			String answer = "";
@@ -109,7 +110,7 @@ public class NumberSequence
 	        System.out.println(Integer.parseInt(answerSplit[0])==this.a);
 
 			if(answerSplit.length == 3 && Integer.parseInt(answerSplit[0])==this.a && Integer.parseInt(answerSplit[1])==this.b && Integer.parseInt(answerSplit[2])==this.c){
-				break;
+				i = 3;
 			} else{
 				System.out.print("Try again.");
 			}
